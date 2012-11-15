@@ -1,0 +1,36 @@
+# Project: sets
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = set.o sT.o tiny.o $(RES)
+LINKOBJ  = set.o sT.o tiny.o $(RES)
+LIBS =   
+INCS = 
+CXXINCS = 
+BIN  = sets.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before sets.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "sets.exe" $(LIBS)
+
+set.o: set.c
+	$(CC) -c set.c -o set.o $(CFLAGS)
+
+sT.o: sT.c
+	$(CC) -c sT.c -o sT.o $(CFLAGS)
+
+tiny.o: tiny.c
+	$(CC) -c tiny.c -o tiny.o $(CFLAGS)
