@@ -24,7 +24,12 @@ CMD=/cygdrive/c/WINNT/system32/cmd.exe
 
 SOURCES=set.c 
 HEADERS=set.h
+
+
+UNIT_TEST=set
 UNIT_TEST=set.exe
+
+
 CFLAGS=-g -Wall
 C_GCOV_FLAGS=-fprofile-arcs -ftest-coverage
 LIB_NEON=-I /usr/include/neon
