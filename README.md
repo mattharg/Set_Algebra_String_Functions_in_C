@@ -1,23 +1,34 @@
 AUTHOR
-Matthew Hargreaves
+	Matthew Hargreaves
 
 BACKGROUND
-This library of C functions was written on a whim to use as a basis for demonstrating the use of a unit test framework - Rational's Test Real-Time (RTRT), and then later traditional C unit testing - placing the unit tests within the source code file under conditional compilation.
+	This library of C functions was written on a whim to use as a basis for demonstrating the use of a unit test framework - Rational's Test Real-Time (RTRT), and then later traditional C unit testing - placing the unit tests within the source code file under conditional compilation.
 
 CONCEPT
-A library of C functions that operate on C strings providing the functionality of set algebra - union, intersection etc.
-So if a="apple pear egg" and b="apple sun", then intersection(a, b)="apple" and union(a, b)="apple pear egg sun".
-It turns out to implement this you need a few support funcitons such as normalForm etc.
-The library contains the source code and the unit tests (the reason for writing the library in the first place).
-The makeFile is for many other testing frameworks as well.
+	A library of C functions that operate on C strings providing the functionality of set algebra - union, intersection etc.
+	So if a="apple pear egg" and b="apple sun", then intersection(a, b)="apple" and union(a, b)="apple pear egg sun".
+	It turns out to implement this you need a few support funcitons such as normalForm etc.
+	The library contains the source code and the unit tests (the reason for writing the library in the first place).
+	The makeFile is for many other testing frameworks as well.
 
 COMMAND-LINE
-A command-line interface is also provided.  I have used the command-line in scripts to manipulate strings where I want the intersection.  Quite Handy - but see also xgrep which has must of the functionality anyway.
+	A command-line interface is also provided.  I have used the command-line in scripts to manipulate strings where I want the intersection function for example.  
+	Quite Handy - but see also xgrep which has must of the functionality anyway.
+
+PLATFORM
+	The 'C' library part should be truely multiplatform, but the command-line suffers from platform mindedness.
+	I developed it on a Windoze platform, need to check it functions fully on linux and OSX.
+
+UNIT TEST
+	The command-line version, on no parameters being supplied will dump out the unit tests - as per 'TEST RESULTS' below.
+	The commandline version can be supplied parameters and be used in scripts etc. - Single character command line flags. Need to give help on this, but....
+	"make testCases" should run the unit tests using the commandline within the Makefile
 
 LICENSE
-Public Domain, though, like any artist, I would like attribution.
+	Public Domain, though, like any artist, I would like attribution.
 
 TEST RESULTS
+
 Test 1    set: Cardinal:      :a b c          :                : Result:  3 
 Test 1_1  set: Cardinal:      :abbey          :                : Result:  1 
 Test 1_2  set: Cardinal:      :               :                : Result:  0 
